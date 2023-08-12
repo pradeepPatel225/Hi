@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.eva.vtigerAutomation.listener.Itestresult"></listener>
+
+	</listeners>
+
+	<groups>
+		<run>
+			<include name="smoke" />
+			<include name="regression" />
+			<include name="smoke,regression" />
+		</run>
+	</groups>
+
+
+	<test thread-count="10" name="verifyLeadsCreation">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.eva.vtigerAutomation.TestCaseLayer.TestCaseLayer1" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test thread-count="10" name="Test11">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.eva.vtigerAutomation.TestCaseLayer.TestCaseLayer1" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test thread-count="10" name="Test1122">
+		<parameter name="browser" value="IO"></parameter>
+		<classes>
+			<class name="com.eva.vtigerAutomation.TestCaseLayer.TestCaseLayer1" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
